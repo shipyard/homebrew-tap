@@ -9,20 +9,20 @@ class ShipyardCli < Formula
   license "Apache2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.1.0/shipyard-darwin-amd64", using: CurlDownloadStrategy
-      sha256 "a35a911ec48a1b9704289242440c718ed0be727f6f08b26fa8b2bf727b4d229b"
-
-      def install
-        bin.install "shipyard-darwin-amd64" => "shipyard-darwin-amd64"
-      end
-    end
     if Hardware::CPU.arm?
       url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.1.0/shipyard-darwin-arm64", using: CurlDownloadStrategy
       sha256 "172045040da5dd943e5f3b5e0e21fd0c1a65bc1a2fd3b28ce95fa3cfe35757cc"
 
       def install
         bin.install "shipyard-darwin-arm64" => "shipyard-darwin-arm64"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.1.0/shipyard-darwin-amd64", using: CurlDownloadStrategy
+      sha256 "a35a911ec48a1b9704289242440c718ed0be727f6f08b26fa8b2bf727b4d229b"
+
+      def install
+        bin.install "shipyard-darwin-amd64" => "shipyard-darwin-amd64"
       end
     end
   end

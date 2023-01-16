@@ -9,39 +9,39 @@ class Shipyard < Formula
   license "Apache2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.2.0/shipyard-darwin-arm64"
-      sha256 "d2440e659304393b21d55eba448945a9b28253597b06208565599383220e58e9"
-
-      def install
-        bin.install "shipyard-darwin-arm64"
-      end
-    end
     if Hardware::CPU.intel?
       url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.2.0/shipyard-darwin-amd64"
-      sha256 "62cce72b549e2c278fbf8d424ad5f9bf8ddf74bf1fec4fec25142fc4fef948c4"
+      sha256 "6ac6cd6fd6f10c30724efff59a0aedafaf9678e77cbd77011caaffc172f34add"
 
       def install
-        bin.install "shipyard-darwin-amd64"
+        bin.install "shipyard-darwin-amd64" => "shipyard"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.2.0/shipyard-darwin-arm64"
+      sha256 "92786bb4e8d0624773462ab0da6c1d02e5a5abeff2437a099c9ce93e8d48364a"
+
+      def install
+        bin.install "shipyard-darwin-arm64" => "shipyard"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.2.0/shipyard-linux-arm64"
-      sha256 "701ad943bce79279dbb6a6de2f61c5bd26c52f1c6dcb839d684856c6cc7daf42"
-
-      def install
-        bin.install "shipyard-linux-arm64"
-      end
-    end
     if Hardware::CPU.intel?
       url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.2.0/shipyard-linux-amd64"
-      sha256 "811138ff6998ab4265f666870372729b1cfc329265ffdf0ebe77b451343f04d6"
+      sha256 "805c00749e75ebaf45ec41e6c00e73a25b55d51bb025d8d36f0f2fbfd561829b"
 
       def install
-        bin.install "shipyard-linux-amd64"
+        bin.install "shipyard-linux-amd64" => "shipyard"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/shipyardbuild/shipyard-cli/releases/download/v1.2.0/shipyard-linux-arm64"
+      sha256 "4395259aaa0c297139f6bd682980852388e657b7fd68bd443710473c501cbdd0"
+
+      def install
+        bin.install "shipyard-linux-arm64" => "shipyard"
       end
     end
   end

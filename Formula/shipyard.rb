@@ -5,21 +5,21 @@
 class Shipyard < Formula
   desc "A tool to manage Ephemeral Environments on the Shipyard platform"
   homepage "https://shipyard.build"
-  version "1.6.0"
+  version "1.7.0"
   license "Apache2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.6.0/shipyard-darwin-amd64"
-      sha256 "f10a4039edd940e72b9f3183910a0199a61a13e3a31bf4a464669e359c3386f0"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.7.0/shipyard-darwin-amd64"
+      sha256 "13a4668848a6e6fb531ec1b42762615cace49a05a71c32132333fb82380304d7"
 
       def install
         bin.install "shipyard-darwin-amd64" => "shipyard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.6.0/shipyard-darwin-arm64"
-      sha256 "9ae51b9b68e300b6510fe1bff4b4b659b6f901aff2a41e85db6dc6c0ac72f95b"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.7.0/shipyard-darwin-arm64"
+      sha256 "057def1fba2f68d6b9d915532a6dd009c5a38fd7cca7425b8fe279989fba8f99"
 
       def install
         bin.install "shipyard-darwin-arm64" => "shipyard"
@@ -28,20 +28,20 @@ class Shipyard < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.6.0/shipyard-linux-arm64"
-      sha256 "af4af275966b8124da2fecf59c02fda7d23d41656fd42167bd45ff729d1515a2"
-
-      def install
-        bin.install "shipyard-linux-arm64" => "shipyard"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.6.0/shipyard-linux-amd64"
-      sha256 "fe06d2b59f338f3782edfd18e89375c0fda13d18c94a18a04f049068eea58913"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.7.0/shipyard-linux-amd64"
+      sha256 "a7a81d34a912ae9a3622190d51c8ed3445d66fe8fb9302cfa050eae4b12e29ca"
 
       def install
         bin.install "shipyard-linux-amd64" => "shipyard"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.7.0/shipyard-linux-arm64"
+      sha256 "8671939959c5804745cef97b75a2976b69f97ce02811eacd4f29cecca9ff5e46"
+
+      def install
+        bin.install "shipyard-linux-arm64" => "shipyard"
       end
     end
   end

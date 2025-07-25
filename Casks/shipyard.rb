@@ -12,23 +12,23 @@ cask "shipyard" do
 
   on_macos do
     on_intel do
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-darwin-amd64.zip"
-      sha256 "77634d6096a6d61093c92fbcd31e8fe62a194563bb3f900f3a1ad31e44cca095"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-cli_1.8.0_darwin_amd64.tar.gz"
+      sha256 "6040a3fc91e9c66c3ba7ee5b991ae715a32d17694074852104b4ef561dc99866"
     end
     on_arm do
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-darwin-arm64.zip"
-      sha256 "298f606266e503a32fd0462e767ffe0ad9fa6f1fe770274618dc3423e2afc101"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-cli_1.8.0_darwin_arm64.tar.gz"
+      sha256 "830e61692e3f53ece4925a68c259968d25ac4c04237c0eabdb1cedf9399ce0ab"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-linux-amd64.tar.gz"
-      sha256 "6c50d7a3d7bc434af86cb83d87236d94709bb59fcac4efdff845697b10927dda"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-cli_1.8.0_linux_amd64.tar.gz"
+      sha256 "54fe45b17880b043ed725dc1cb34bb3038d34ade51fec6a14847a3242d11ffc3"
     end
     on_arm do
-      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-linux-arm64.tar.gz"
-      sha256 "82be96302e01b747d3940f04c8ff10b5c999a0da5b8d14d878fa69cf1de76956"
+      url "https://github.com/shipyard/shipyard-cli/releases/download/v1.8.0/shipyard-cli_1.8.0_linux_arm64.tar.gz"
+      sha256 "ca364c3e7023524fb358449e595dc212cfdebe0edef6fa1c351b9e977b1c2e42"
     end
   end
 
